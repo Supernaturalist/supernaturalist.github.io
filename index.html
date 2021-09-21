@@ -1,27 +1,122 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<body>
- <h1>Testing</h1>
- <div class="home">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="exotic, bot, disord, top.gg, botlist, discord bots, bots, exotic bot, exotic dashboard, exotic discord">
+    <meta name="description" content="Exotic is a simple bot with not much to worry about, here to conveniently improve your server!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="img/png" href="img/exotic transparent icon.png" />
+    <script src="https://kit.fontawesome.com/962f049b1f.js" crossorigin="anonymous"></script>
+  </head>
 
-  <h1 class="page-heading">Posts</h1>
+  <body class="bodyHome">
+		<div class="navbar sticky" id="navbar">
+      <div class="tbar">
+			  <button class="home shome"><div class="logoimg"></div></button><img src="/img/exotic logo banner green.png">
+		  </div>
+      <div class="shadow"></div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	  	<div class="navLinks">
+		  	<!--<a href="commands"><button class="btn  btncom">Commands</button></a>-->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+		  	<a href="https://discord.gg/fr2Wz2y8VW" target="_blank"><button class="btn btnsup">Support</button></a>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		  	<a href="https://discord.com/oauth2/authorize?client_id=806919473206132807&permissions=8&scope=bot" target="_blank"><button class="btn btninv">Invite</button></a>
 
- </div>
-  
-</body>
+		  	<a href="premium"><button class="btn btnprem">Premium</button></a>
+
+		  	<!--<a href="faq"><button class="btn btfqa">FaQ</button></a>-->
+	  	</div>
+
+      <script>
+        window.onscroll = function() {stickyBar()};
+
+        var navbar = document.getElementById("navbar");
+        var main = document.getElementById("main");
+        var sticky = navbar.offsetTop;
+
+        function stickyBar() {
+         if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+          main.classList.add("stickyMain");
+          } else {
+            navbar.classList.remove("sticky");
+            main.classList.remove("stickyMain");
+         }
+        }
+      </script>
+    </div>
+    
+
+		<div class="main" id="main">
+      <div class="info">
+			  <h1 class="mainhead">Improve Your Server in 2 Minutes</h1>
+			  <h3 class="mainparagraph">You want a well functioning discord server? We have just the thing for you! The <em>Exotic</em> bot is here right now to make your community better in just minutes.</h3>
+			  <div style="padding-top:20px;" class="homeButtons">
+          <a href="https://discord.com/oauth2/authorize?client_id=806919473206132807&permissions=8&scope=bot" target="_blank"><button class="btn btadd btnmain"><i class="fab fa-discord"></i> Add to Discord</button></a>
+			    <!--<a href="commands"><button class="btn btcmd btnmain">See Commands</button></a>-->
+          <a href="https://discord.gg/fr2Wz2y8VW"><button class="btn btcmd btnmain">Support Server</button></a>
+        </div>
+      </div>
+      <div class="line homeline2"></div>
+      <div class="features">
+        <div class="feature">
+          <div class="col-1"></div>
+          <div class="featureinfo col-5">
+            <h2 class="featurehead">Moderation</h2>
+            <h4 class="mainparagraph">Exotic comes with a full moderation system including ban, kick, warn, and mute commands, all with an optional reason.</h4><br>
+          </div>
+          <div class="featurepic col-5">
+            <img style="height:300px;margin-top:50px;" class="featurepic" src="img/home/verify.png" alt="moderation" />
+          </div>
+          <div class="col-1"></div> 
+        </div>
+        <div class="line homeline"></div>
+
+        <div class="feature">
+          <div class="featurepicleft">
+            <img src="img/home/verify.png" alt="polls" /><br>
+            <!--<img src="suggestion.png" alt="suggestion" />-->
+          </div>
+          <div class="featureinfo">
+            <h2 class="featurehead">Utilities</h2>
+            <h3 class="mainparagraph">With Exotic you can use various server utilities, including a calculator, poll command, and suggestion channels (coming soon).</h3><br>
+          </div>
+        </div>
+        <div class="line homeline"></div>
+
+        <div class="feature">
+          <div class="featureinfoleft">
+            <h2 class="featurehead">Music</h2>
+            <h3 class="mainparagraph">Jam out in your server voice channels by playing any song from YouTube.</h3><br>
+          </div>
+          <div class="featurepic">
+            <img src="img/home/verify.png" alt="queue" />
+          </div>
+        </div>
+        <div class="line"></div>
+
+        <!--<div class="feature">
+          <h2 class="featurehead">Fun</h2>
+          <h3 class="mainparagraph">Play games and more.</h3><br>
+          <img src="fun.png" alt="fun" />
+        </div>
+        <div class="line"></div>
+
+        <div class="feature">
+          <h2 class="featurehead">Search</h2>
+          <h3 class="mainparagraph">Search the Internet for anything you are curious about, or just for fun.</h3><br>
+          <img src="search.png" alt="search" />
+        </div>-->
+      </div>
+		</div>
+
+    <div class="filler"></div>
+    <div class="footerHome">
+      <p>Copyright © 2021 Exotic Bot. | <a href="rules.html">Rules</a> | <a href="mailto:support@exoticbot.xyz">Contact</a></p>
+    </div>
+	</body>
+</html>
